@@ -11,3 +11,6 @@ button {
   @apply bg-indigo-700 bg-opacity-20;
 }
 
+.is-pressed {
+  @apply bg-indigo-800 bg-opacity-20;
+}
