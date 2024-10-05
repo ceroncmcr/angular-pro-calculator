@@ -9,12 +9,11 @@ const specialOperators = ['+/-','%','.','=','C', 'Backspace']
 })
 export class CalculatorService {
   public resultText = signal( '0' );
-  public subResultText = signal( '10' );
+  public subResultText = signal( '0' );
   public lastOperator = signal( '+' );
 
   public constructNumber ( value: string) : void {
     if( ![ ...numbers, ...operators, ...specialOperators ].includes( value ) ) {
-      console.log('Invalid input', value);
       return;
     }
 
@@ -63,7 +62,7 @@ export class CalculatorService {
 
     //Limitar numero de caracteres
     if( this.resultText().length >= 10){
-      console.log('Max length reached');
+      //console.log('Max length reached');
       return;
     }
 
@@ -116,7 +115,7 @@ export class CalculatorService {
 
   }
 
-  calculateResult(){
+  public calculateResult(){
 
     const number1 = parseFloat( this.subResultText() );
     const number2 = parseFloat( this.resultText() );

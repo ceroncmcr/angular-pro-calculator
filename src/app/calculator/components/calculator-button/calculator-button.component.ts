@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, input, out
   imports: [],
   templateUrl: './calculator-button.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['./calculator-button.component.scss'],
+  styleUrls: ['./calculator-button.component.css'],
   host: {
     class: 'border-r border-b border-indigo-400',
     '[class.w-2/4]': 'isDoubleSize()',
